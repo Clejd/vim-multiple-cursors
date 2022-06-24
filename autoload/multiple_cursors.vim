@@ -1248,7 +1248,6 @@ function! s:wait_for_user_input(mode)
           let char_mapping = maparg(s:char, "i")
         endif
         " handle case where mapping is <esc>
-        exec 'let s:char = "'.substitute(char_mapping, '<', '\\<', 'g').'"'
         break
       endif
       " break if chars don't match beginning of mapping anymore
